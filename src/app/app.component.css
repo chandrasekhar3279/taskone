@@ -1,0 +1,9 @@
+.header{
+    display: flex;
+    background-color:#00ADB5;
+    justify-content: start;
+}
+h1{
+    font-family: Display fonts;
+    color: #EEEEEE;
+}

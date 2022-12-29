@@ -1,0 +1,83 @@
+<div class="container dashboard-screen">
+    <div class="dashboard-header-bar">
+
+        <h2>DashboardPage</h2>
+        <div>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                (click)="clickAddEmployee()">Add
+                Member</button>
+            <button class="btn btn-danger mx-2" routerLink="/Login">Logout</button>
+        </div>
+    </div>
+    <div>
+        <div>
+            <p-table [value]="users">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>EmployeeId</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>MobileNo</th>
+                        <th>Action</th>
+                        <!-- <th>MobileNo</th> -->
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-user>
+                    <tr>
+                        <td>{{user.id}}</td>
+                        <td>{{user.firstname}}</td>
+                        <td>{{user.lastname}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.mobilenumber}}</td>
+                        <td>
+                            <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                (click)="dataEdit(user)">Edit</button>
+                            <button class="btn btn-danger mx-3" (click)="deleteEmployee(user)">Delete</button>
+                        </td>
+                        <!-- <td>{{users.MobileNo}}</td> -->
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Enter Employee Details</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body dashboard-model-screen-inputs">
+                <form action="" [formGroup]="formValue">
+                    <div class="">
+                        <input formControlName="firstname" type="text" name="" id="" placeholder="Firstname">
+                    </div>
+                    <div>
+                        <input formControlName="lastname" type="text" name="" id="" placeholder="Lastname">
+                    </div>
+                    <div>
+                        <input formControlName="email" type="text" name="" id="" placeholder="Email">
+                    </div>
+                    <div>
+                        <input formControlName="mobilenumber" type="text" placeholder="Mobile Number" />
+                    </div>
+                    <div class="mb-2">
+                        <input formControlName="password" type="text" name="" id="" placeholder="Password">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="cancel" data-bs-dismiss="modal">Close</button>
+                <button type="button" *ngIf="showAdd" class="btn btn-primary" (click)="postEmployeeDetails()">Add
+                    Details</button>
+                <button type="button" *ngIf="showUpdate" class="btn btn-info" (click)="updateEmployeeDetails()">Update
+                    Details</button>
+            </div>
+        </div>
+    </div>
+</div>

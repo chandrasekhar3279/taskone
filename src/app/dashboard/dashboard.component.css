@@ -1,0 +1,18 @@
+.dashboard-screen{
+    /* background-color: aqua; */
+   padding: 10px;
+}
+.dashboard-header-bar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.dashboard-model-screen-inputs{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+input{
+    margin-top: 10px;
+}

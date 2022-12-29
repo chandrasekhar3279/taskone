@@ -1,0 +1,19 @@
+.login-screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#EEEEEE;
+    padding: 20px;
+    /* height: 100vh; */
+}
+input{
+ margin-top: 10px;
+}
+.login-btn{
+    /* display: flex; */
+    margin: 10px;
+    background-color: black;
+    color: yellow;
+    justify-content: center;
+    align-items: center;
+}

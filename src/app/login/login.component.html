@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="login-screen">
+        <form action="">
+            <form action="" [formGroup]="loginForm" (ngSubmit)="logIn()">
+                <div>
+                    <!-- <label for="">Email</label> -->
+                    <input type="text" formControlName="email" placeholder="Enter Your Email">
+                </div>
+                <div>
+                    <!-- <label for=""> Password</label> -->
+                    <input type="text" formControlName="password" name="" id="" placeholder="Enter Your Password">
+                </div>
+                <div class="" style="display:flex;align-items: center;justify-content: center;">
+                    <button class="btn btn-success mt-3 mb-3">Login</button>
+                </div>
+            </form>
+            <div>
+                <a routerLink="/Signup">New User? SignUp Here</a>
+            </div>
+        </form>
+    </div>
+</div>

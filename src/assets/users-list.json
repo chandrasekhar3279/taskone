@@ -1,0 +1,15 @@
+[{
+"name":"user-1",
+"age": 20,
+"email":"user1@gmail.com",
+"mobile":"9000680012",
+"pincode":"523265"
+},
+{
+    "name":"user-2",
+    "age": 22,
+    "email":"user1@gmail.com",
+    "mobile":"9000680012",
+    "pincode":"523265"
+}
+]

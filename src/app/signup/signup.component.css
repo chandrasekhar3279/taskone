@@ -1,0 +1,13 @@
+.signup-screen{
+    display:flex;
+    background-color:#EEEEEE;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+}
+input{
+    margin-top: 10px;
+}
+button{
+    margin: 10px;
+}
